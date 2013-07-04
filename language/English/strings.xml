@@ -2,7 +2,7 @@
 <strings>
 
 	<!--New Strings-->
-	<string id="41000">Picture</string>
+	<string id="41000">Pictures</string>
 	<string id="41001">Music</string>
 	<string id="41002">Movies</string>
 	<string id="41003">TV Shows</string>
@@ -11,7 +11,8 @@
 	<string id="41006">Settings</string>
 	<string id="41007">Shutdown</string>
 	<string id="41008">Videos</string>
-
+  <string id="41024">Live TV</string>
+  
 	<string id="41009">Today</string>		
 
 	<string id="41010">Recently Added</string>	

@@ -9,6 +9,10 @@
 	<include file="IncludesHomeSubMenu.xml" />
 	<include file="IncludesNowPlaying.xml" />	
 	<include file="Custom_Home.xml" />
+
+  <!--PVR-->
+  <include file="MyPVR.xml" />
+  <include file="ViewsPVR.xml" />
 	
 
 	<!--Avalon Version-->
@@ -140,8 +144,37 @@
 				<label>HOME</label>			
 			</control>	
 		</control>	
-	</include>		
-	<!--Header Video-->
+	</include>
+  <!--Header PVR-->
+  <include name="HeaderPVR">
+    <control type="group">
+      <visible>!Window.IsActive(DialogKaiToast.xml)</visible>
+      <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+      <include>animation_visible_hidden</include>
+      <animation effect="fade" time="600" >WindowOpen</animation>
+      <animation effect="fade" time="600" >WindowClose</animation>
+      <control type="image">
+        <posx>30</posx>
+        <posy>25</posy>
+        <height>60</height>
+        <width>80</width>
+        <aligny>center</aligny>
+        <texture>common/logo.png</texture>
+        <colordiffuse>mainblue</colordiffuse>
+      </control>
+      <control type="label">
+        <posx>130</posx>
+        <posy>25</posy>
+        <width min="80" max="500">auto</width>
+        <height>80</height>
+        <font>Light45</font>
+        <align>left</align>
+        <textcolor>mainblue</textcolor>
+        <label>LIVE TV</label>
+      </control>
+    </control>
+  </include>
+  <!--Header Video-->
 	<include name="HeaderVideo">	
 		<control type="group">
 			<visible>!Window.IsActive(DialogKaiToast.xml)</visible>
@@ -943,7 +976,15 @@
            <effect type="fade" start="0" end="100" time="300" tween="sine" easing="inout" />
            <effect type="zoom" start="50" end="100" time="300" center="auto" tween="sine" easing="inout" delay="100" />	
         </animation>		
-	</include>	
+	</include>
+  <include name="animation_widget_poster_reflection">
+    <!--Widget Poster Anitmaion-->
+    <animation type="Focus" reversible="true">
+      <effect type="fade" start="50" end="100" time="300" tween="sine" easing="inout" />
+      <effect type="zoom" start="100" end="110" time="300" center="auto" tween="sine" easing="inout" delay="100" />
+      <effect type="slide" start="0,0" end="0,21" time="450" tween="sine" easing="inout" delay="0" />
+    </animation>
+  </include>
 	<include name="animation_widget_dialog">				<!--Widget Dialog Animation-->			
 		<animation type="Visible" reversible="false">			
 			<effect type="zoom" start="75" end="100" center="960,540" easing="out" tween="back" time="300" />
@@ -1304,7 +1345,7 @@
 			<align>left</align>
 			<font>Light35</font>
 			<textcolor>mainblue</textcolor>
-			<label>$INFO[VideoPlayer.Genre] • $INFO[VideoPlayer.Year]</label>	
+			<label>$INFO[VideoPlayer.Genre] â€¢ $INFO[VideoPlayer.Year]</label>	
 			<scroll>false</scroll>
 		</control>
 		
@@ -1328,7 +1369,7 @@
 			<align>left</align>
 			<font>Light35</font>
 			<textcolor>mainblue</textcolor>
-			<label>$INFO[VideoPlayer.TVShowTitle] • $LOCALIZE[20373] $INFO[VideoPlayer.Season]</label>
+			<label>$INFO[VideoPlayer.TVShowTitle] â€¢ $LOCALIZE[20373] $INFO[VideoPlayer.Season]</label>
 			<scroll>false</scroll>
 		</control>
 		

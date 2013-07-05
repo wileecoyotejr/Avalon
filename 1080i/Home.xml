@@ -156,7 +156,7 @@
           <!--Live TV-->
           <label>41024</label>
           <icon>backgrounds/pvr.png</icon>
-          <thumb>$INFO[Skin.String(CustomPVRPanel)]</thumb>
+          <thumb>$INFO[Skin.String(CustomPVRFolder)]</thumb>
           <onclick>ActivateWindowAndFocus(PVR, 32,0, 11,0)</onclick>
           <visible>!Skin.HasSetting(HomeMenuNoPVRButton)</visible>
         </item>        

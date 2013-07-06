@@ -151,7 +151,15 @@
 					<onclick>ActivateWindow(Video,tvshowtitles,return)</onclick>
 					<visible>Library.HasContent(TVShows)</visible>
 					<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
-				</item>			
+				</item>
+        <item id="7">
+          <!--Live TV-->
+          <label>41024</label>
+          <icon>backgrounds/pvr.png</icon>
+          <thumb>$INFO[Skin.String(CustomPVRFolder)]</thumb>
+          <onclick>ActivateWindowAndFocus(PVR, 32,0, 11,0)</onclick>
+          <visible>!Skin.HasSetting(HomeMenuNoPVRButton)</visible>
+        </item>        
 				<item id="8">		<!--Video-Addons-->						
 					<label>41004</label>					
 					<icon>backgrounds/videoaddons.png</icon>

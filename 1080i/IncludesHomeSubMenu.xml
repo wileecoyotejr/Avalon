@@ -4,7 +4,7 @@
 	
 		<!--Sub Menu Tab Left-->
 		<control type="group">	
-		<visible>Container(300).HasFocus(10) | Container(300).HasFocus(5) | Container(300).HasFocus(6) | Container(300).HasFocus(3) | Container(300).HasFocus(11)</visible>
+		<visible>Container(300).HasFocus(10) | Container(300).HasFocus(5) | Container(300).HasFocus(6) | Container(300).HasFocus(7) | Container(300).HasFocus(3) | Container(300).HasFocus(11)</visible>
 		<include>SubMenuTabLeft</include>	
 		</control>
 		
@@ -394,10 +394,70 @@
 					<include>SubMenuButton</include>	
 					<label>41136</label>					
 					<onclick>ActivateWindow(3003)</onclick>			
-				</control>	
-							
-				
-			</control>	
+				</control>
+
+        <!--PVR Buttons-->
+        <control type="label" id="13">
+          <!--Label Menu-->
+          <visible>Container(300).HasFocus(7)</visible>
+          <width>458</width>
+          <align>left</align>
+          <textoffsetx>50</textoffsetx>
+          <font>Light40</font>
+          <textcolor>mainblue</textcolor>
+          <label>$LOCALIZE[41090]:</label>
+        </control>
+        <control type="image" id="14">
+          <!--Seperator-->
+          <visible>Container(300).HasFocus(7)</visible>
+          <width>458</width>
+          <height>20</height>
+          <align>left</align>
+          <texture>common/menu-separator.png</texture>
+        </control>
+        <control type="button" id="32">
+          <visible>Container(300).HasFocus(7)</visible>
+          <description>TV Channels</description>
+          <!--Refresh-->
+          <description>Refresh</description>
+          <label>19023</label>
+          <onclick>ActivateWindowAndFocus(PVR, 32,0, 11,0)</onclick>
+          <include>SubMenuButton</include>
+        </control>
+        <control type="button" id="33">
+          <visible>Container(300).HasFocus(7)</visible>
+          <description>Radio Channels</description>
+          <!--Settings-->
+          <description>Settings</description>
+          <label>19024</label>
+          <include>SubMenuButton</include>
+        </control>
+        <control type="button" id="31">
+          <visible>Container(300).HasFocus(7)</visible>
+          <description>TV Guide</description>
+          <include>SubMenuButton</include>
+          <label>$LOCALIZE[19222]: $LOCALIZE[19030]</label>
+        </control>
+        <control type="button" id="34">
+          <visible>Container(300).HasFocus(7)</visible>
+          <description>Recordings</description>
+          <include>SubMenuButton</include>
+          <label>19163</label>
+        </control>
+        <control type="button" id="35">
+          <visible>Container(300).HasFocus(7)</visible>
+          <description>Timers</description>
+          <include>SubMenuButton</include>
+          <label>19040</label>
+        </control>
+        <control type="button" id="36">
+          <visible>Container(300).HasFocus(7)</visible>
+          <description>Search</description>
+          <include>SubMenuButton</include>
+          <label>137</label>
+        </control>
+
+      </control>	
 		</control>		
 	
 	</include>	
